@@ -1,0 +1,8 @@
+{
+  id: @player.id,
+  full_name: @player.full_name,
+  age: @player.age,
+  team: @player.team,
+  position: @player.position,
+  college: @player.college
+}

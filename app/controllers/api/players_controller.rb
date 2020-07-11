@@ -7,4 +7,5 @@ class Api::PlayersController < ApplicationController
   def show
     @player = Player.find_by(id: params[:id])
     render 'show.json.jb'
+  end
 end
