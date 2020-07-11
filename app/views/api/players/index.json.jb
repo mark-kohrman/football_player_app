@@ -1,0 +1,11 @@
+@players.map do |player|
+{
+  id: player.id,
+  full_name: player.full_name,
+  age: player.age,
+  team: player.team,
+  postion: player.position,
+  college: player.college
+
+}
+end
