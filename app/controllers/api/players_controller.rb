@@ -20,4 +20,17 @@ class Api::PlayersController < ApplicationController
     @player.save
     render 'show.json.jb'
   end
+
+  def update
+    @player = Player.find_by(id: params[:id])
+    @player.update(
+      full_name: params[:full_name] || @player.full_name,
+      age: params[:age] || @player.age,
+      team: params[:team] || @player.team,
+      position: params[:position] || @player.position,
+      college: params[:college] || @player.college
+    )
+    @player.save
+    render 'show.json.jb'
+  end
 end
