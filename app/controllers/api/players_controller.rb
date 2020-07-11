@@ -33,4 +33,11 @@ class Api::PlayersController < ApplicationController
     @player.save
     render 'show.json.jb'
   end
+
+  def destroy
+    @player = Player.find_by(id: params[:id])
+    @player.destroy
+
+    render json: {message: "Congratulations, you have destroyed this player and his career by finding old tweets"}
+  end
 end
